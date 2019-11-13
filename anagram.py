@@ -1,11 +1,6 @@
 import os
 
-if os.getenv('STRING_ONE').isalpha() and os.getenv('STRING_TWO').isalpha():
-
-    if sorted(os.getenv('STRING_ONE').strip()) == sorted(os.getenv('STRING_TWO').strip()):
-        print(True)
-    else:
-        print(False)
+if sorted(os.getenv('STRING_ONE').replace(" ", "")) == sorted(os.getenv('STRING_TWO').replace(" ", "")):
+    print(True)
 else:
     print(False)
-
